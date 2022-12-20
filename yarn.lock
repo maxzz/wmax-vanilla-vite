@@ -133,15 +133,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@types/@vituum/vite-plugin-nunjucks":
-  version "0.1.5"
-  resolved "https://codeload.github.com/vituum/vite-plugin-nunjucks/tar.gz/0d73ef204862b9a4486fa41727af30f0b5206fda"
-  dependencies:
-    chalk "^5.2.0"
-    fast-glob "^3.2.12"
-    lodash "^4.17.21"
-    nunjucks "^3.2.3"
-
 "@types/node@^18.11.17":
   version "18.11.17"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.17.tgz#5c009e1d9c38f4a2a9d45c0b0c493fe6cdb4bcb5"

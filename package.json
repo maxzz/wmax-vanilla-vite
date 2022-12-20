@@ -10,7 +10,6 @@
         "preview": "vite preview"
     },
     "devDependencies": {
-        "@types/": "vituum/vite-plugin-nunjucks",
         "@types/node": "^18.11.17",
         "@vituum/vite-plugin-nunjucks": "^0.1.5",
         "typescript": "^4.9.3",
