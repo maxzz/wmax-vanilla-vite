@@ -1,18 +1,19 @@
 {
-  "name": "wmax-vanilla-vite",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "typescript": "^4.9.3",
-    "vite": "^4.0.0"
-  },
-  "dependencies": {
-    "@types/node": "^18.11.17"
-  }
+    "name": "wmax-vanilla-vite",
+    "private": true,
+    "description": "build project with vite bundler",
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.17",
+        "typescript": "^4.9.3",
+        "vite": "^4.0.0",
+        "vite-plugin-nunjucks": "^0.1.10"
+    },
+    "dependencies": {}
 }
