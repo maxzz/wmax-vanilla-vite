@@ -1,13 +1,15 @@
 import path from 'path';
 import { defineConfig } from 'vite';
-import nunjucks from '@vituum/vite-plugin-nunjucks';
+import posthtml from '@vituum/posthtml';
 
 //https://vitejs.dev/config/
 export default defineConfig({
     base: '',
     plugins: [
-        nunjucks(),
+        posthtml(),
     ],
+    // integrations: [posthtml()],
+
     server: {
         port: 3000,
     },
