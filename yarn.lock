@@ -224,6 +224,11 @@ typescript@^4.9.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
   integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
 
+vite-plugin-html-inject@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-html-inject/-/vite-plugin-html-inject-1.0.1.tgz#f5d421e4e74231c51f710805236d7ad597a9e49b"
+  integrity sha512-wBZR4QGeOCnRO73xc8t0CQYv0QDzfA2CW4/4Uaf3qkNFr68DFVnIPs0Sqbys9UGL4z41grnchNh8RHUOVBYd/w==
+
 vite@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/vite/-/vite-4.0.2.tgz#909beb07995048fe5a83b35b5e827d79627457c4"
