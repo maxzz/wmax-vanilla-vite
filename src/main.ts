@@ -1,4 +1,5 @@
 import './style.css';
+import './index.css';
 import typescriptLogo from './typescript.svg';
 import { setupCounter } from './counter';
 import { createInput } from './components/control-input';
