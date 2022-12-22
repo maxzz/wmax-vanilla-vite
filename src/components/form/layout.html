@@ -1,0 +1,49 @@
+<div class="my-12 px-4 grid grid-cols-[1fr_minmax(15ch,65ch)_1fr]">
+    <!-- <b class="bg-blue-200"></b> -->
+
+    <div class="col-start-2 px-4 py-4 text-2xl font-semibold tracking-tighter bg-slate-200 select-none">
+        Form caption
+    </div>
+
+    <div class="p-4 col-start-2 bg-slate-100 grid">
+        <label class="grid select-none">
+            <span>Input label</span>
+            <input class="border-slate-500 border rounded-sm form-focus-element" type="text">
+            <span class="invisible text-xs leading-3 font-semibold text-red-500">The field value cannot be empty.</span>
+        </label>
+
+        <label class="grid select-none">
+            <span>Input label</span>
+            <input class="border-slate-500 border rounded-sm form-focus-element" type="text">
+            <span class="invisible text-xs leading-3 font-semibold text-red-500">The field value cannot be empty.</span>
+        </label>
+
+        <label class="grid select-none">
+            <span>Text area</span>
+            <textarea class="h-32 min-h-[4rem] border-slate-500 border rounded-sm form-focus-element"></textarea>
+            <span class="invisible text-xs leading-3 font-semibold text-red-500">The field value cannot be empty.</span>
+        </label>
+
+        <label class="my-3 flex items-center space-x-2 select-none">
+            <input class="w-5 h-5 rounded text-slate-700 form-focus-checkbox" type="checkbox" checked>
+            <span>Are you sure?</span>
+        </label>
+
+        <label class="grid select-none">
+            <span>Select one of them</span>
+            <select class="rounded-sm form-focus-element">
+                <option class="bg-slate-100" value="1">First</option>
+                <option class="bg-slate-100" value="2">Second</option>
+                <option class="bg-slate-100" value="3">Third</option>
+            </select>
+            <span class="invisible text-xs leading-3 font-semibold text-red-500">The field value cannot be empty.</span>
+        </label>
+
+        <div class="flex justify-end gap-x-2 select-none">
+            <input class="px-4 py-2 hover:bg-slate-200 border-slate-500 border rounded active:scale-[.97] form-focus-element" type="button" value="OK">
+            <input class="px-4 py-2 hover:bg-slate-200 border-slate-500 border rounded active:scale-[.97] form-focus-element" type="button" value="Cancel">
+        </div>
+    </div>
+
+    <!-- <b class="bg-blue-200"></b> -->
+</div>
