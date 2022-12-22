@@ -12,6 +12,6 @@ const el = document.createElement('div');
 el.innerHTML = mainHtml.replace('${typescriptLogo}', typescriptLogo);
 app.appendChild(el);
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
+// setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
 
 createInput().forEach((el) => app.appendChild(el));
