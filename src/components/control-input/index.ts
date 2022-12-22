@@ -1,15 +1,7 @@
 import layout from './layout.html?raw';
 
-export function createInput() {
+export function createInput(): HTMLElement[] {
     const el = document.createElement('div');
     el.innerHTML = layout;
-
-    // if (el.children.length > 1) {
-    //     return el.children;
-    // }
-
-    if (!el.firstChild) {
-        throw new Error('bad template');
-    }
-    return el.firstChild;
+    return [...el.children] as HTMLElement[];
 }

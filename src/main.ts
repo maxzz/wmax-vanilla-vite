@@ -1,6 +1,6 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
+import './style.css';
+import typescriptLogo from './typescript.svg';
+import { setupCounter } from './counter';
 import { createInput } from './components/control-input';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -19,8 +19,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
 
-document.body.appendChild(createInput());
+createInput().forEach((el) => document.body.appendChild(el));
