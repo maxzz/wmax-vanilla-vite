@@ -1,24 +1,27 @@
 <div class="my-12 px-4 grid grid-cols-[1fr_minmax(15ch,65ch)_1fr]">
-    <!-- <b class="bg-blue-200"></b> -->
+    <b class="bg-blue-200"></b>
 
     <div class="col-start-2 px-4 py-4 text-2xl font-semibold tracking-tighter bg-slate-200 select-none">
         Form caption
     </div>
 
-    <div class="p-4 col-start-2 bg-slate-100 grid gap-y-2">
+    <div class="p-4 col-start-2 bg-slate-100 grid">
         <label class="grid select-none">
             <span>Input label</span>
             <input class="border-slate-500 border rounded-sm form-focus-element" type="text">
+            <span class="invisible text-xs leading-3 font-semibold text-red-500">This is error</span>
         </label>
 
         <label class="grid select-none">
             <span>Input label</span>
             <input class="border-slate-500 border rounded-sm form-focus-element" type="text">
+            <span class="invisible text-xs leading-3 font-semibold text-red-500">This is error</span>
         </label>
 
         <label class="grid select-none">
             <span>Text area</span>
             <textarea class="h-32 border-slate-500 border rounded-sm form-focus-element"></textarea>
+            <span class="invisible text-xs leading-3 font-semibold text-red-500">This is error</span>
         </label>
 
         <label class="mt-2 flex items-center space-x-2 select-none">
@@ -33,6 +36,7 @@
                 <option class="bg-slate-100" value="2">Second</option>
                 <option class="bg-slate-100" value="3">Third</option>
             </select>
+            <span class="invisible text-xs leading-3 font-semibold text-red-500">This is error</span>
         </label>
 
 
@@ -43,5 +47,5 @@
 
     </div>
 
-    <!-- <b class="bg-blue-200"></b> -->
+    <b class="bg-blue-200"></b>
 </div>
