@@ -1,29 +1,34 @@
 <div class="my-12 px-4 grid grid-cols-[1fr_minmax(15ch,65ch)_1fr]">
     <!-- <b class="bg-blue-200"></b> -->
 
-    <div class="col-start-2 px-4 py-4 text-2xl font-semibold tracking-tighter bg-slate-200">
+    <div class="col-start-2 px-4 py-4 text-2xl font-semibold tracking-tighter bg-slate-200 select-none">
         Form caption
     </div>
 
     <div class="p-4 col-start-2 bg-slate-100 grid gap-y-2">
-        <label class="grid">
+        <label class="grid select-none">
             <span>Input label</span>
-            <input class="border-slate-500 border rounded-sm focus:outline-none focus:ring-1 focus:ring-blue-800" type="text">
+            <input class="border-slate-500 border rounded-sm form-focus-element" type="text">
         </label>
 
-        <label class="grid">
+        <label class="grid select-none">
             <span>Input label</span>
-            <input class="border-slate-500 border rounded-sm focus:outline-none focus:ring-1 focus:ring-blue-800" type="text">
+            <input class="border-slate-500 border rounded-sm form-focus-element" type="text">
         </label>
 
-        <label class="mt-2 flex items-center space-x-2">
-            <input class="w-5 h-5 rounded accent-red-400 focus:outline-none focus:ring-1 focus:ring-blue-800" type="checkbox">
+        <label class="grid select-none">
+            <span>Text area</span>
+            <textarea class="h-32 border-slate-500 border rounded-sm form-focus-element"></textarea>
+        </label>
+
+        <label class="mt-2 flex items-center space-x-2 select-none">
+            <input class="w-5 h-5 rounded text-slate-700 form-focus-checkbox" type="checkbox" checked>
             <span>Are you sure?</span>
         </label>
 
-        <label class="grid">
+        <label class="grid select-none">
             <span>Select one of them</span>
-            <select class="rounded-sm focus:outline-none focus:ring-1 focus:ring-blue-800">
+            <select class="rounded-sm form-focus-element">
                 <option class="bg-slate-100" value="1">First</option>
                 <option class="bg-slate-100" value="2">Second</option>
                 <option class="bg-slate-100" value="3">Third</option>
@@ -31,9 +36,9 @@
         </label>
 
 
-        <div class="flex justify-end gap-x-2">
-            <input class="px-4 py-2 hover:bg-slate-200 border-slate-500 border rounded active:scale-[.97] focus:outline-none focus:ring-1 focus:ring-blue-800" type="button" value="OK">
-            <input class="px-4 py-2 hover:bg-slate-200 border-slate-500 border rounded active:scale-[.97] focus:outline-none focus:ring-1 focus:ring-blue-800" type="button" value="Cancel">
+        <div class="flex justify-end gap-x-2 select-none">
+            <input class="px-4 py-2 hover:bg-slate-200 border-slate-500 border rounded active:scale-[.97] form-focus-element" type="button" value="OK">
+            <input class="px-4 py-2 hover:bg-slate-200 border-slate-500 border rounded active:scale-[.97] form-focus-element" type="button" value="Cancel">
         </div>
 
     </div>
