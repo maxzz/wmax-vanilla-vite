@@ -1,11 +1,11 @@
 <div class="my-12 px-4 grid grid-cols-[1fr_minmax(15ch,65ch)_1fr]">
     <!-- <b class="bg-blue-200"></b> -->
 
-    <div class="col-start-2 px-4 py-4 text-2xl font-semibold tracking-tighter grid gap-y-2 bg-slate-200">
+    <div class="col-start-2 px-4 py-4 text-2xl font-semibold tracking-tighter bg-slate-200">
         Form caption
     </div>
 
-    <div class="p-4 col-start-2 grid gap-y-2 bg-slate-100">
+    <div class="p-4 col-start-2 bg-slate-100 grid gap-y-2">
         <label class="grid">
             <span>Input label</span>
             <input class="border-slate-500 border rounded-sm" type="text">
@@ -16,14 +16,24 @@
             <input class="border-slate-500 border rounded-sm" type="text">
         </label>
 
-        <label class="">
-            <input type="checkbox">
+        <label class="mt-2 flex items-center space-x-2">
+            <input class="w-5 h-5 rounded accent-red-400" type="checkbox">
             <span>Are you sure?</span>
         </label>
 
+        <label class="grid">
+            <span>Are you sure?</span>
+            <select>
+                <option class="bg-red-400 hover:bg-green-400 accent-red-400" value="1">First</option>
+                <option value="2">Second</option>
+                <option value="3">Third</option>
+            </select>
+        </label>
+
+
         <div class="flex justify-end gap-x-2">
-            <input class="px-4 py-2 hover:bg-slate-100 border-slate-500 border rounded active:scale-[.97]" type="button" value="Cancel">
-            <input class="px-4 py-2 hover:bg-slate-100 border-slate-500 border rounded active:scale-[.97]" type="button" value="OK">
+            <input class="px-4 py-2 hover:bg-slate-200 border-slate-500 border rounded active:scale-[.97]" type="button" value="OK">
+            <input class="px-4 py-2 hover:bg-slate-200 border-slate-500 border rounded active:scale-[.97]" type="button" value="Cancel">
         </div>
 
     </div>
