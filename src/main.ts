@@ -1,6 +1,7 @@
 import './style.css';
 import './index.css';
-import typescriptLogo from './typescript.svg';
+import typescriptLogo from './assets/typescript.svg';
+
 import { setupCounter } from './counter';
 import { createInput } from './components/control-input';
 import mainHtml from './components/main/index.html?raw';
