@@ -13,6 +13,25 @@ type Element = {
     data: FormInput;
 };
 
+class ElementText implements Element {
+    rootEl: HTMLElement;
+    errorEl: HTMLElement;
+    data: FormInput;
+    
+    constructor(data: FormInput) {
+        const template = textToElement(controlInput);
+        const label = query(':nth-child(1)', template);
+        label.innerText = data.label;
+    
+        const error = query(':nth-child(3)', template);
+        error.classList.remove('invisible');
+
+        this.rootEl = template;
+        this.errorEl = error;
+        this.data = data;
+    }
+}
+
 function createText(data: FormInput): Element {
     const template = textToElement(controlInput);
     const label = query(':nth-child(1)', template);
@@ -20,6 +39,8 @@ function createText(data: FormInput): Element {
 
     const error = query(':nth-child(3)', template);
     error.classList.remove('invisible');
+
+    //const res =
 
     return {
         rootEl: template,
@@ -33,7 +54,8 @@ export function createForm(inputs: FormInput[]): HTMLElement {
     const insElm = query('.insert-point', parent);
 
     inputs.reverse().forEach((input) => {
-        const el = createText(input);
+        //const el = createText(input);
+        const el = new ElementText(input);
         insElm.insertBefore(el.rootEl, insElm.firstChild);
     });
 
