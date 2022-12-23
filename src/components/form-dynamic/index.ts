@@ -7,12 +7,25 @@ import controlSelect from './control-select.html?raw';
 import controlTextarea from './control-textarea.html?raw';
 import controlCheckbox from './control-checkbox.html?raw';
 
-function createText(data: FormInput) {
+type Element = {
+    rootEl: HTMLElement;
+    errorEl: HTMLElement;
+    data: FormInput;
+};
+
+function createText(data: FormInput): Element {
     const template = textToElement(controlInput);
     const label = query(':nth-child(1)', template);
     label.innerText = data.label;
-    
-    return template;
+
+    const error = query(':nth-child(3)', template);
+    error.classList.remove('invisible');
+
+    return {
+        rootEl: template,
+        errorEl: error,
+        data: data,
+    };
 }
 
 export function createForm(inputs: FormInput[]): HTMLElement {
@@ -21,7 +34,7 @@ export function createForm(inputs: FormInput[]): HTMLElement {
 
     inputs.reverse().forEach((input) => {
         const el = createText(input);
-        insElm.insertBefore(el, insElm.firstChild);
+        insElm.insertBefore(el.rootEl, insElm.firstChild);
     });
 
     return parent;
