@@ -5,7 +5,7 @@ import './index.css';
 //import { createFormStatic } from './components/form-static';
 //import mainHtml from './components/main/index.html?raw';
 import { createForm } from './components/form-dynamic';
-import { FormInput } from './store/types';
+import { FormInput, InputType } from './store/types';
 
 function main() {
     const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -18,7 +18,23 @@ function main() {
 
     //createFormStatic().forEach((el) => app.appendChild(el));
     
-    const inputs: FormInput[] = [];
+    const inputs: FormInput[] = [
+        {
+            label: "Input control 1",
+            type: InputType.text,
+            value: '',
+        },
+        {
+            label: "Input control 2",
+            type: InputType.text,
+            value: '',
+        },
+        {
+            label: "Input control 3",
+            type: InputType.text,
+            value: '',
+        },
+    ];
     app.appendChild(createForm(inputs));
 }
 
