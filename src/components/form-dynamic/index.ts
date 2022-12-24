@@ -7,14 +7,18 @@ import controlSelect from './control-select.html?raw';
 import controlTextarea from './control-textarea.html?raw';
 import controlCheckbox from './control-checkbox.html?raw';
 
+type DOMElementType = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+
 type Element = {
     rootEl: HTMLElement;
+    inputEl: DOMElementType;
     errorEl: HTMLElement;
     data: FormInput;
 };
 
 class ElementText implements Element {
     rootEl: HTMLElement;
+    inputEl: DOMElementType;
     errorEl: HTMLElement;
     data: FormInput;
     
@@ -23,12 +27,19 @@ class ElementText implements Element {
         const label = query(':nth-child(1)', template);
         label.innerText = data.label;
     
+        const input = query<DOMElementType>(':nth-child(2)', template);
+
         const error = query(':nth-child(3)', template);
         error.classList.remove('invisible');
 
         this.rootEl = template;
+        this.inputEl = input;
         this.errorEl = error;
         this.data = data;
+    }
+
+    onInput = () => {
+        console.log('data', this.data);
     }
 }
 
