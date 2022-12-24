@@ -21,12 +21,12 @@ class ElementText implements Element {
     inputEl: DOMElementType;
     errorEl: HTMLElement;
     data: FormInput;
-    
+
     constructor(data: FormInput) {
         const template = textToElement(controlInput);
         const label = query(':nth-child(1)', template);
         label.innerText = data.label;
-    
+
         const input = query<DOMElementType>(':nth-child(2)', template);
 
         const error = query(':nth-child(3)', template);
@@ -36,11 +36,16 @@ class ElementText implements Element {
         this.inputEl = input;
         this.errorEl = error;
         this.data = data;
+
+        this.inputEl.addEventListener('change', this.onInput);
     }
 
+
     onInput = () => {
+        this.errorEl.style.visibility = !this.inputEl.value ? 'visible' : 'hidden';
+
         console.log('data', this.data);
-    }
+    };
 }
 
 export function createForm(inputs: FormInput[]): HTMLElement {
