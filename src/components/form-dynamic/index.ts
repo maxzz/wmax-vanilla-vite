@@ -38,14 +38,15 @@ class ElementText implements Element {
         this.data = data;
 
         this.inputEl.addEventListener('change', this.onInput);
+        this.updateErrorMessage(false);
     }
 
-    updateErrorMessage() {
-        this.errorEl.style.visibility = !this.inputEl.value ? 'visible' : 'hidden';
+    updateErrorMessage(show: boolean) {
+        this.errorEl.style.visibility = show ? 'visible' : 'hidden';
     }
 
     onInput = () => {
-        this.updateErrorMessage();
+        this.updateErrorMessage(!this.inputEl.value);
     };
 }
 
