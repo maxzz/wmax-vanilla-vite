@@ -40,11 +40,12 @@ class ElementText implements Element {
         this.inputEl.addEventListener('change', this.onInput);
     }
 
+    updateErrorMessage() {
+        this.errorEl.style.visibility = !this.inputEl.value ? 'visible' : 'hidden';
+    }
 
     onInput = () => {
-        this.errorEl.style.visibility = !this.inputEl.value ? 'visible' : 'hidden';
-
-        console.log('data', this.data);
+        this.updateErrorMessage();
     };
 }
 
