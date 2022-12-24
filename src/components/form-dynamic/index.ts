@@ -37,7 +37,7 @@ class ElementText implements Element {
         this.errorEl = error;
         this.data = data;
 
-        this.inputEl.addEventListener('change', this.onInput);
+        this.inputEl.addEventListener('blur', this.onInput);
         this.updateErrorMessage(false);
     }
 
