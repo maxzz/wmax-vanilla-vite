@@ -53,9 +53,9 @@ export function createForm(inputs: FormInput[]): HTMLElement {
     const parent = textToElement(layout);
     const insElm = query('.insert-point', parent);
 
-    inputs.reverse().forEach((input) => {
-        //const el = createText(input);
-        const el = new ElementText(input);
+    const allElements = inputs.map((input) => new ElementText(input));
+
+    allElements.reverse().forEach((el) => {
         insElm.insertBefore(el.rootEl, insElm.firstChild);
     });
 
