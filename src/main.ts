@@ -6,6 +6,7 @@ import './index.css';
 //import mainHtml from './components/main/index.html?raw';
 import { createForm } from './components/form-dynamic';
 import { FormInput, InputType } from './store/types';
+import { createHeader } from './header';
 
 function main() {
     const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -17,6 +18,9 @@ function main() {
     // setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
 
     //createFormStatic().forEach((el) => app.appendChild(el));
+
+    const header = createHeader();
+    app.appendChild(header);
     
     const inputs: FormInput[] = [
         {
