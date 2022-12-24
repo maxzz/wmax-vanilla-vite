@@ -7,6 +7,7 @@ import './index.css';
 import { createForm } from './components/form-dynamic';
 import { FormInput, InputType } from './store/types';
 import { createHeader } from './header';
+import { transitionFromClass, transitionToClass } from './utils';
 
 function main() {
     const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -21,6 +22,8 @@ function main() {
 
     const header = createHeader();
     app.appendChild(header);
+
+    transitionFromClass(header, 'invisible', 'transition-all')
     
     const inputs: FormInput[] = [
         {

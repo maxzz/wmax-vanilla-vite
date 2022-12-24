@@ -1,3 +1,5 @@
+export * from './transitions24';
+
 export function textToElement<T extends HTMLElement = HTMLElement>(str: string): T {
     const el = document.createElement('div');
     el.innerHTML = str;
