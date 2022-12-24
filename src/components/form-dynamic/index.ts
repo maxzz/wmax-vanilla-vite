@@ -32,23 +32,6 @@ class ElementText implements Element {
     }
 }
 
-function createText(data: FormInput): Element {
-    const template = textToElement(controlInput);
-    const label = query(':nth-child(1)', template);
-    label.innerText = data.label;
-
-    const error = query(':nth-child(3)', template);
-    error.classList.remove('invisible');
-
-    //const res =
-
-    return {
-        rootEl: template,
-        errorEl: error,
-        data: data,
-    };
-}
-
 export function createForm(inputs: FormInput[]): HTMLElement {
     const parent = textToElement(layout);
     const insElm = query('.insert-point', parent);
