@@ -7,14 +7,19 @@ import controlSelect from './control-select.html?raw';
 import controlTextarea from './control-textarea.html?raw';
 import controlCheckbox from './control-checkbox.html?raw';
 
-type DOMElementType = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+export type DOMElementType = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
-type Element = {
+export type Element = {
     rootEl: HTMLElement;
     inputEl: DOMElementType;
     errorEl: HTMLElement;
     data: FormInput;
 };
+
+export type FormElements = {
+    elements: Element[];
+    rootEl: HTMLElement;
+}
 
 class ElementText implements Element {
     rootEl: HTMLElement;
@@ -50,7 +55,7 @@ class ElementText implements Element {
     };
 }
 
-export function createForm(inputs: FormInput[]): HTMLElement {
+export function createForm(inputs: FormInput[]): FormElements {
     const parent = textToElement(layout);
     const insElm = query('.insert-point', parent);
 
@@ -60,5 +65,10 @@ export function createForm(inputs: FormInput[]): HTMLElement {
         insElm.insertBefore(el.rootEl, insElm.firstChild);
     });
 
-    return parent;
+    const res: FormElements = {
+        elements: allElements,
+        rootEl: parent,
+    }
+
+    return res;
 }

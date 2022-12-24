@@ -35,7 +35,8 @@ function main() {
             value: '',
         },
     ];
-    app.appendChild(createForm(inputs));
+    const formElements = createForm(inputs);
+    app.appendChild(formElements.rootEl);
 }
 
 main();
