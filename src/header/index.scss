@@ -1,0 +1,14 @@
+.header2 {
+    display: none;
+    opacity: 0;
+}
+
+.header2.transition {
+    display: flex;
+    transition: opacity 10.2s ease-out;
+}
+
+.header2.active {
+    display: flex;
+    opacity: 1;
+}

@@ -23,8 +23,8 @@ function main() {
     const header = createHeader();
     app.appendChild(header);
 
-    transitionFromClass(header, 'invisible', 'transition-all')
-    
+    transitionToClass(header, 'active', 'transition');
+
     const inputs: FormInput[] = [
         {
             label: "Input control 1",
